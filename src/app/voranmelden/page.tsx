@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import LeadForm from "@/components/forms/LeadForm";
 
 export const metadata: Metadata = {
@@ -20,10 +18,6 @@ export default async function VoranmeldenPage({
     <main className="min-h-screen pt-20 pb-12">
       <div className="max-w-lg mx-auto px-4 sm:px-6">
         <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center gap-2 mb-6">
-            <Image src="/logo.svg" alt="Clawsistent" width={44} height={44} />
-            <span className="text-2xl font-bold text-navy-900">Clawsistent</span>
-          </Link>
           <h1 className="text-3xl font-bold text-navy-900">
             Jetzt voranmelden
           </h1>

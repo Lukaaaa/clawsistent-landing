@@ -5,7 +5,7 @@ export default function LogoMarquee() {
     <section className="py-12 bg-navy-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <p className="text-center text-sm text-navy-400 font-medium uppercase tracking-wider">
-          Vertraut von Unternehmen im DACH-Raum
+          Entwickelt für Unternehmen wie
         </p>
       </div>
       <div className="relative">

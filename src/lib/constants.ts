@@ -226,18 +226,18 @@ export const DEMO_CHATS: DemoChat[] = [
 ];
 
 export const COMPANY_LOGOS = [
-  "Raiffeisen",
-  "Wirtschaftskammer",
-  "Erste Bank",
-  "Siemens Austria",
-  "A1 Telekom",
-  "Verbund AG",
-  "OMV",
-  "BAWAG",
-  "Porr AG",
-  "Strabag",
-  "voestalpine",
-  "Red Bull",
+  "ImmobilienScout24",
+  "AutoScout24",
+  "Engel & Völkers",
+  "RE/MAX Austria",
+  "DATEV",
+  "Finanzonline",
+  "Doctolib",
+  "CHECK24",
+  "WKO",
+  "Haufe Group",
+  "Stihl",
+  "Würth",
 ];
 
 export const PROFESSION_OPTIONS = PROFESSIONS.map((p) => ({
