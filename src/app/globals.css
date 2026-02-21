@@ -41,8 +41,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Logo marquee animation */
-@keyframes marquee {
+/* Logo marquee animation — pixel-based for consistent speed across viewports */
+@keyframes marquee-px {
   0% {
     transform: translateX(0);
   }
@@ -51,10 +51,6 @@ body {
   }
 }
 
-.animate-marquee {
-  animation: marquee 12s linear infinite;
-  will-change: transform;
-}
 
 /* Typing animation */
 @keyframes blink {
