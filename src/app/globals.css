@@ -52,7 +52,8 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 12s linear infinite;
+  will-change: transform;
 }
 
 /* Typing animation */
