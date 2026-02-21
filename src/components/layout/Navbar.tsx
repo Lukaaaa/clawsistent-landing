@@ -61,7 +61,9 @@ export default function Navbar() {
             <a href="/#anwendungen" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Anwendungen</a>
             <a href="/#funktionen" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Funktionen</a>
             <a href="/#preise" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Preise</a>
-            <Button href="/voranmelden" className="w-full">Voranmelden</Button>
+            <div onClick={() => setIsMobileMenuOpen(false)}>
+              <Button href="/voranmelden" className="w-full">Voranmelden</Button>
+            </div>
           </div>
         </div>
       )}
