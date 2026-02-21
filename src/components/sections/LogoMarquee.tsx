@@ -1,23 +1,6 @@
-"use client";
-
-import { useRef, useEffect, useState } from "react";
 import { COMPANY_LOGOS } from "@/lib/constants";
 
 export default function LogoMarquee() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [halfWidth, setHalfWidth] = useState(0);
-
-  useEffect(() => {
-    const measure = () => {
-      if (trackRef.current) {
-        setHalfWidth(trackRef.current.scrollWidth / 2);
-      }
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
-
   return (
     <section className="py-12 bg-navy-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
@@ -26,13 +9,7 @@ export default function LogoMarquee() {
         </p>
       </div>
       <div className="relative">
-        <div
-          ref={trackRef}
-          className="flex whitespace-nowrap"
-          style={{
-            animation: halfWidth ? `marquee-px ${halfWidth / 50}s linear infinite` : undefined,
-          }}
-        >
+        <div className="flex animate-marquee whitespace-nowrap">
           {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((name, i) => (
             <div
               key={i}
