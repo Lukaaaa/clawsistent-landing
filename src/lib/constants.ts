@@ -194,33 +194,82 @@ export const DEMO_CHATS: DemoChat[] = [
   {
     professionId: "rechtsanwalt",
     messages: [
-      { role: "user", content: "Hat Herr Müller morgen einen Termin?" },
-      { role: "assistant", content: "Herr Müller hat morgen um 14:00 Uhr einen Beratungstermin zum Thema Mietrecht. Soll ich ihm eine Erinnerung senden?" },
-      { role: "user", content: "Ja, bitte mit Hinweis auf die mitzubringenden Unterlagen." },
-      { role: "assistant", content: "Erledigt! Ich habe Herrn Müller eine Erinnerung mit der Dokumentenliste gesendet. ✅" },
+      { role: "user", content: "Wann läuft die Berufungsfrist im Fall Schneider ab?" },
+      { role: "assistant", content: "Die Berufungsfrist im Fall Schneider (Az. 12 O 345/25) läuft am Freitag, 28.02. ab. Das Urteil wurde am 31.01. zugestellt. Soll ich den Schriftsatz-Entwurf zur Prüfung vorbereiten?" },
+      { role: "user", content: "Ja, und schick Frau Schneider ein Update zum Verfahrensstand." },
+      { role: "assistant", content: "Erledigt! Berufungsschriftsatz-Entwurf liegt in Ihrer Akte bereit. Frau Schneider hat eine E-Mail mit dem aktuellen Verfahrensstand und den nächsten Schritten erhalten. ✅" },
     ],
   },
   {
     professionId: "steuerberater",
     messages: [
-      { role: "user", content: "Wie viele Steuererklärungen sind diese Woche fällig?" },
-      { role: "assistant", content: "Diese Woche sind 12 Steuererklärungen fällig. 8 sind bereits fertig, 4 warten noch auf Unterlagen der Mandanten." },
-      { role: "user", content: "Schicke den 4 Mandanten eine freundliche Erinnerung." },
-      { role: "assistant", content: "Ich habe personalisierte Erinnerungen an alle 4 Mandanten versendet mit der Liste der fehlenden Dokumente. ✅" },
+      { role: "user", content: "Welche Mandanten haben ihre Belege für die UStVA Februar noch nicht eingereicht?" },
+      { role: "assistant", content: "4 Mandanten haben noch offene Belege: Müller GmbH (Eingangsrechnungen), Weber KG (Reisekosten), Praxis Dr. Horn (Kassenbuch), Schmidt Consulting (Bankbelege). Frist ist der 10.03." },
+      { role: "user", content: "Schicke allen eine Erinnerung mit den fehlenden Unterlagen." },
+      { role: "assistant", content: "Ich habe 4 personalisierte Erinnerungen versendet — jeweils mit der konkreten Liste der fehlenden Belege und dem Fristhinweis 10.03. ✅" },
     ],
   },
   {
     professionId: "arzt",
     messages: [
-      { role: "user", content: "Welche Patienten haben heute noch Termine?" },
-      { role: "assistant", content: "Heute stehen noch 5 Termine an: 14:00 Frau Schmidt (Nachkontrolle), 14:30 Herr Weber (Erstberatung), 15:00 Frau Klein (Blutbild), 15:30 Herr Lang (Impfung), 16:00 Frau Bach (Rezept)." },
+      { role: "user", content: "Hat Frau Bergmann ihre Blutwerte schon zurückbekommen?" },
+      { role: "assistant", content: "Ja, das Labor hat die Ergebnisse heute um 9:15 übermittelt. Auffällig: HbA1c liegt bei 7,2% (Vorwert 6,8%). Soll ich Frau Bergmann für eine Nachbesprechung einladen?" },
+      { role: "user", content: "Ja, möglichst diese Woche noch. Und bereite die Werte als Verlaufskurve vor." },
+      { role: "assistant", content: "Termin bei Frau Bergmann angefragt für Donnerstag 15:30. Die HbA1c-Verlaufskurve der letzten 12 Monate liegt als Übersicht in der Patientenakte bereit. ✅" },
     ],
   },
   {
     professionId: "makler",
     messages: [
-      { role: "user", content: "Erstelle ein Exposé für die 3-Zimmer-Wohnung in der Hauptstraße 15." },
-      { role: "assistant", content: "Ich erstelle das Exposé mit den hinterlegten Daten: 3 Zimmer, 78m², Baujahr 2005, Balkon, Tiefgarage. Kaltmiete €950. Soll ich es als PDF generieren und an die Interessentenliste senden?" },
+      { role: "user", content: "Wie viele Anfragen gab es zur Dachgeschosswohnung in der Lindenstraße?" },
+      { role: "assistant", content: "Seit Veröffentlichung vor 3 Tagen: 23 Anfragen, davon 14 mit Bonitätsnachweis. Top-Kandidaten: Familie Krause (Doppelverdiener, sofort verfügbar), Herr Demir (Bestandskunde). Soll ich Besichtigungstermine koordinieren?" },
+      { role: "user", content: "Ja, plane Samstag Einzelbesichtigungen mit den 5 besten Kandidaten." },
+      { role: "assistant", content: "5 Einzelbesichtigungen am Samstag geplant: 10:00, 10:45, 11:30, 12:15 und 13:00 Uhr. Bestätigungen mit Anfahrtsbeschreibung wurden an alle Interessenten gesendet. ✅" },
+    ],
+  },
+  {
+    professionId: "handwerker",
+    messages: [
+      { role: "user", content: "Wie sieht die Auftragslage für nächste Woche aus?" },
+      { role: "assistant", content: "Nächste Woche: 3 Badsanierungen (Mo–Mi im Projekt Hofgasse), Donnerstag Heizungswartung bei Familie Pohl, Freitag Notdienst-Reserve. Offene Anfrage: Herr Klein möchte ein Angebot für eine Küchenmontage." },
+      { role: "user", content: "Erstelle Herrn Klein ein Angebot. Standardküche, ca. 4 Stunden Montage." },
+      { role: "assistant", content: "Angebot für Herrn Klein erstellt: Küchenmontage inkl. Anschluss Wasser/Elektro, 4h à €65 = €260 netto zzgl. Anfahrt €35. Als PDF per E-Mail zugestellt. ✅" },
+    ],
+  },
+  {
+    professionId: "gastronom",
+    messages: [
+      { role: "user", content: "Wir haben Samstagabend eine Reservierung für 25 Personen. Ist genug Ware da?" },
+      { role: "assistant", content: "Für 25 Personen reicht der aktuelle Bestand nicht: Es fehlen ca. 3kg Rinderfilet, 2kg Lachs und 5 Flaschen Grüner Veltliner. Außerdem ist die Nachspeise ‚Topfenknödel' nur für 15 Portionen vorrätig." },
+      { role: "user", content: "Bestell das Fehlende beim Zulieferer und setz ein Sondermenü auf für die Gruppe." },
+      { role: "assistant", content: "Bestellung an Transgourmet raus: 3kg Rinderfilet, 2kg Lachs, 5× Grüner Veltliner, Topfenmasse für 15 Portionen. Lieferung Freitag bis 14:00. Sondermenü-Vorschlag: Gruß aus der Küche → Lachs-Tatar → Rinderfilet mit Rösti → Topfenknödel. Soll ich das Menü als PDF an den Gast senden? ✅" },
+    ],
+  },
+  {
+    professionId: "coach",
+    messages: [
+      { role: "user", content: "Wie viele Teilnehmer haben sich für das Führungskräfte-Seminar nächste Woche angemeldet?" },
+      { role: "assistant", content: "Aktuell 8 von 12 Plätzen belegt. 3 Teilnehmer haben noch nicht bezahlt. Außerdem haben 2 Interessenten um einen Rückruf gebeten, weil sie Fragen zum Seminarinhalt haben." },
+      { role: "user", content: "Schick den 3 eine Zahlungserinnerung und ruf die 2 Interessenten zurück mit den Seminardetails." },
+      { role: "assistant", content: "3 freundliche Zahlungserinnerungen mit Bankdaten und Frist versendet. Für die 2 Interessenten habe ich Rückruf-Termine in Ihrem Kalender eingetragen (heute 14:00 und 14:30) inkl. Gesprächsleitfaden mit Seminarinfos. ✅" },
+    ],
+  },
+  {
+    professionId: "versicherung",
+    messages: [
+      { role: "user", content: "Herr Bauer hat einen Wasserschaden gemeldet. Wie ist er versichert?" },
+      { role: "assistant", content: "Herr Bauer hat eine Haushaltsversicherung bei der Wiener Städtischen (Polizze HH-2024-8891): Deckung Leitungswasser bis €50.000, Selbstbehalt €150. Letzte Prämie bezahlt am 01.02. Soll ich die Schadensmeldung vorbereiten?" },
+      { role: "user", content: "Ja, und schick ihm die Checkliste, welche Fotos und Belege er braucht." },
+      { role: "assistant", content: "Schadensmeldung als Entwurf vorbereitet mit allen Polizze-Daten. Herr Bauer hat per E-Mail die Checkliste erhalten: Fotos vom Schaden, Kostenvoranschlag Installateur, Rechnung der Trocknung. ✅" },
+    ],
+  },
+  {
+    professionId: "agentur",
+    messages: [
+      { role: "user", content: "Was steht im Content-Plan für den Kunden ‚BioAlm' diese Woche an?" },
+      { role: "assistant", content: "BioAlm diese Woche: Montag Instagram-Reel (Hofbesuch-Behind-the-Scenes), Mittwoch Blog-Artikel (‚5 Gründe für Bio-Heumilch'), Freitag Newsletter-Versand (Frühlings-Aktion -15%). Reel-Skript ist noch offen, Blogartikel ist im Entwurf." },
+      { role: "user", content: "Schreib das Reel-Skript und schick den Blogartikel zur Freigabe an den Kunden." },
+      { role: "assistant", content: "Reel-Skript erstellt: 30 Sek., Hook → Hofführung → Produktshot → CTA. Blogartikel ‚5 Gründe für Bio-Heumilch' (820 Wörter, SEO-optimiert) an Frau Hofer von BioAlm zur Freigabe gesendet. ✅" },
     ],
   },
 ];
