@@ -6,7 +6,7 @@ interface BadgeProps {
 
 const variantStyles = {
   green: "bg-green-500/10 text-green-600 border-green-500/20",
-  orange: "bg-primary-500/10 text-primary-600 border-primary-500/20",
+  orange: "bg-white text-primary-600 border-primary-500",
   navy: "bg-navy-100 text-navy-700 border-navy-200",
 };
 
