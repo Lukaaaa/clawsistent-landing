@@ -72,7 +72,7 @@ export default function DemoSection() {
 
         <div className="bg-navy-50 rounded-2xl border border-navy-100 overflow-hidden">
           <div className="bg-navy-900 px-6 py-3 flex items-center gap-2">
-            <span className="text-white text-sm font-medium">🐾 Clawsistent Chat</span>
+            <span className="text-white text-sm font-medium">Clawsistent Chat</span>
           </div>
 
           <div ref={chatRef} className="p-6 space-y-4 min-h-[280px] max-h-[400px] overflow-y-auto">
