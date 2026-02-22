@@ -138,7 +138,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     name: "Professional",
     price: 99,
     period: "/ Monat",
-    description: "Für wachsende Teams und anspruchsvolle Kanzleien",
+    description: "Für wachsende Teams mit höheren Ansprüchen",
     features: [
       "3 KI-Assistenten",
       "Unbegrenzte Nachrichten",
