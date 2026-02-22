@@ -92,9 +92,9 @@ export const FEATURES: Feature[] = [
     icon: "📄",
   },
   {
-    title: "Kundenverwaltung",
-    description: "Kontakte pflegen, Kundenhistorie einsehen, Notizen hinzufügen",
-    icon: "👥",
+    title: "Integrationen",
+    description: "Verbindet sich mit Ihrem CRM, ERP und den Tools, die Sie bereits nutzen",
+    icon: "🔗",
   },
   {
     title: "Aufgabenmanagement",
