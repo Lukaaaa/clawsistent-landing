@@ -3,10 +3,10 @@
 import { useState, useEffect, useRef } from "react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
-import { DEMO_CHATS, PROFESSION_OPTIONS } from "@/lib/constants";
+import { DEMO_CHATS, PROFESSIONS } from "@/lib/constants";
 
 export default function DemoSection() {
-  const [selectedProfession, setSelectedProfession] = useState(PROFESSION_OPTIONS[0].value);
+  const [selectedProfession, setSelectedProfession] = useState(PROFESSIONS[0].id);
   const [visibleMessages, setVisibleMessages] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
   const chatRef = useRef<HTMLDivElement>(null);
@@ -49,21 +49,25 @@ export default function DemoSection() {
         <SectionHeader
           label="Live Demo"
           heading="Sehen Sie Clawsistent in Aktion"
-          description="Wählen Sie Ihren Beruf und erleben Sie, wie Ihr KI-Assistent arbeitet."
         />
 
-        <div className="mb-6 flex justify-center">
-          <select
-            value={selectedProfession}
-            onChange={(e) => setSelectedProfession(e.target.value)}
-            className="px-4 py-2 border border-navy-200 rounded-lg text-navy-700 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-          >
-            {PROFESSION_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value}>
-                {opt.label}
-              </option>
+        <div className="mb-6 -mx-4 px-4 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-2 w-max mx-auto">
+            {PROFESSIONS.map((p) => (
+              <button
+                key={p.id}
+                onClick={() => setSelectedProfession(p.id)}
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+                  selectedProfession === p.id
+                    ? "bg-primary-500 text-white shadow-md"
+                    : "bg-white text-navy-600 border border-navy-200 hover:border-primary-300"
+                }`}
+              >
+                <span>{p.emoji}</span>
+                <span>{p.label}</span>
+              </button>
             ))}
-          </select>
+          </div>
         </div>
 
         <div className="bg-navy-50 rounded-2xl border border-navy-100 overflow-hidden">
