@@ -16,6 +16,7 @@ export interface Profession {
   emoji: string;
   description: string;
   skills: string[];
+  integrations: string[];
 }
 
 export interface Feature {

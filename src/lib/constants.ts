@@ -7,6 +7,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "⚖️",
     description: "Mandantenanfragen beantworten, Fristen verwalten, Schriftsätze vorbereiten",
     skills: ["Mandatsverwaltung", "Fristenmanagement", "Rechtsrecherche"],
+    integrations: ["RA-MICRO", "ACTAPORT", "Advokat", "timeSensor LEGAL"],
   },
   {
     id: "steuerberater",
@@ -14,6 +15,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "📊",
     description: "Steuererklärungen vorbereiten, Mandantenkommunikation, Buchhaltung",
     skills: ["Steuererklärung", "Buchhaltung", "Mandantenbetreuung"],
+    integrations: ["BMD", "DATEV", "RZL", "Lexware"],
   },
   {
     id: "arzt",
@@ -21,6 +23,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "🩺",
     description: "Patientenanfragen, Terminverwaltung, Dokumentation",
     skills: ["Patientenverwaltung", "Terminplanung", "Dokumentation"],
+    integrations: ["INNOMED", "Latido", "tomedo", "Medistar"],
   },
   {
     id: "makler",
@@ -28,6 +31,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "🏠",
     description: "Exposés erstellen, Besichtigungen planen, Kundenbetreuung",
     skills: ["Exposé-Erstellung", "Terminkoordination", "Kundenpflege"],
+    integrations: ["onOffice", "FLOWFACT", "Propstack", "ImmoScout24"],
   },
   {
     id: "handwerker",
@@ -35,6 +39,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "🔧",
     description: "Auftragsanfragen bearbeiten, Kostenvoranschläge, Terminplanung",
     skills: ["Auftragsverwaltung", "Angebotserstellung", "Einsatzplanung"],
+    integrations: ["HERO", "openHandwerk", "Craftnote", "STREIT"],
   },
   {
     id: "gastronom",
@@ -42,6 +47,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "🍽️",
     description: "Reservierungen, Speisekarten, Lieferantenbestellungen",
     skills: ["Reservierungen", "Menüplanung", "Bestellmanagement"],
+    integrations: ["orderbird", "ready2order", "Lightspeed", "gastronovi"],
   },
   {
     id: "coach",
@@ -49,6 +55,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "💡",
     description: "Terminbuchung, Kundenanfragen, Kursplanung",
     skills: ["Terminbuchung", "Kundenkommunikation", "Kursplanung"],
+    integrations: ["Calendly", "Zoom", "CentralStationCRM", "Orbnet"],
   },
   {
     id: "versicherung",
@@ -56,6 +63,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "🛡️",
     description: "Angebotsvergleiche, Schadensmeldungen, Kundenberatung",
     skills: ["Angebotsvergleich", "Schadensbearbeitung", "Beratung"],
+    integrations: ["VERA", "aB-Agenta", "Insurgo", "ProClient"],
   },
   {
     id: "agentur",
@@ -63,6 +71,7 @@ export const PROFESSIONS: Profession[] = [
     emoji: "🎨",
     description: "Projektmanagement, Kundenbriefings, Social Media Planung",
     skills: ["Projektmanagement", "Content-Planung", "Kundenbriefings"],
+    integrations: ["Adobe CC", "Figma", "Asana", "awork"],
   },
 ];
 
