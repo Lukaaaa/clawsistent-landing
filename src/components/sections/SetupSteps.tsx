@@ -12,8 +12,8 @@ export default function SetupSteps() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="So funktioniert's"
-          heading="In 5 Schritten startklar"
-          description="Von der Anmeldung bis zum produktiven Einsatz — in wenigen Minuten."
+          heading="In 3 Schritten startklar"
+          description="Verbinden und los geht's — ohne Einrichtung, ohne Training."
         />
 
         <div className="space-y-3">

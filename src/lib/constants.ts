@@ -157,27 +157,17 @@ export const SETUP_STEPS: SetupStep[] = [
   {
     number: 1,
     title: "Beruf wählen",
-    description: "Wählen Sie Ihren Beruf aus und Clawsistent passt sich automatisch an Ihre branchenspezifischen Anforderungen an.",
+    description: "Wählen Sie Ihren Beruf aus und Clawsistent passt sich automatisch an Ihre Branche an.",
   },
   {
     number: 2,
-    title: "Wissen bereitstellen",
-    description: "Laden Sie Ihre Dokumente, FAQs und Vorlagen hoch. Clawsistent lernt Ihr Unternehmen kennen.",
+    title: "Tools verbinden",
+    description: "Verbinden Sie Ihre E-Mail, Ihren Kalender und Ihre bestehenden Tools mit wenigen Klicks.",
   },
   {
     number: 3,
-    title: "Integrationen verbinden",
-    description: "Verbinden Sie Ihre E-Mail, Ihren Kalender und andere Tools, die Sie täglich nutzen.",
-  },
-  {
-    number: 4,
-    title: "Assistenten trainieren",
-    description: "Passen Sie den Tonfall, die Antworten und die Workflows an Ihre Bedürfnisse an.",
-  },
-  {
-    number: 5,
-    title: "Live schalten",
-    description: "Ihr KI-Assistent ist bereit. Beginnen Sie, Zeit zu sparen und Kunden besser zu betreuen.",
+    title: "Los geht's",
+    description: "Ihr KI-Assistent ist sofort einsatzbereit. Keine Einrichtung, kein Training nötig.",
   },
 ];
 
