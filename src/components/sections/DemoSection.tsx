@@ -51,8 +51,8 @@ export default function DemoSection() {
           heading="Sehen Sie Clawsistent in Aktion"
         />
 
-        <div className="mb-6 -mx-4 px-4 overflow-x-auto scrollbar-hide">
-          <div className="flex gap-2 w-max mx-auto">
+        <div className="mb-6">
+          <div className="flex flex-wrap justify-center gap-2">
             {PROFESSIONS.map((p) => (
               <button
                 key={p.id}
