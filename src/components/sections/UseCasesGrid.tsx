@@ -32,6 +32,19 @@ export default function UseCasesGrid() {
                   </span>
                 ))}
               </div>
+              <div className="mt-4 pt-4 border-t border-navy-100">
+                <p className="text-xs font-medium text-navy-400 mb-2">Integrationen</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {profession.integrations.map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-2 py-0.5 text-xs bg-primary-50 text-primary-700 rounded-full border border-primary-200"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
