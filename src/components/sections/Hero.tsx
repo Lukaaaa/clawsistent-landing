@@ -15,8 +15,8 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-navy-500 max-w-2xl mx-auto">
-          Clawsistent automatisiert Ihre Büroarbeit — von E-Mails über Terminplanung
-          bis zur Kundenverwaltung. Branchenspezifisch. DSGVO-konform. Sofort einsatzbereit.
+          Clawsistent automatisiert Ihre Büroarbeit. Von E-Mails über Terminplanung
+          bis zur Kundenverwaltung. Branchenspezifisch, DSGVO-konform und sofort einsatzbereit.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

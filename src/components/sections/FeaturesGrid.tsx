@@ -8,7 +8,7 @@ export default function FeaturesGrid() {
         <SectionHeader
           label="Funktionen"
           heading="Alles, was Ihr Backoffice braucht"
-          description="Von Kommunikation bis Buchhaltung — Clawsistent deckt alle wichtigen Büroaufgaben ab."
+          description="Von Kommunikation bis Buchhaltung. Clawsistent deckt alle wichtigen Büroaufgaben ab."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

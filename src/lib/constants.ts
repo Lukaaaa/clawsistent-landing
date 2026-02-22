@@ -215,7 +215,7 @@ export const DEMO_CHATS: DemoChat[] = [
       { role: "user", content: "Welche Mandanten haben ihre Belege für die UStVA Februar noch nicht eingereicht?" },
       { role: "assistant", content: "4 Mandanten haben noch offene Belege: Müller GmbH (Eingangsrechnungen), Weber KG (Reisekosten), Praxis Dr. Horn (Kassenbuch), Schmidt Consulting (Bankbelege). Frist ist der 10.03." },
       { role: "user", content: "Schicke allen eine Erinnerung mit den fehlenden Unterlagen." },
-      { role: "assistant", content: "Ich habe 4 personalisierte Erinnerungen versendet — jeweils mit der konkreten Liste der fehlenden Belege und dem Fristhinweis 10.03. ✅" },
+      { role: "assistant", content: "Ich habe 4 personalisierte Erinnerungen versendet, jeweils mit der konkreten Liste der fehlenden Belege und dem Fristhinweis 10.03. ✅" },
     ],
   },
   {

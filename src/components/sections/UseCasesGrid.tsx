@@ -8,7 +8,7 @@ export default function UseCasesGrid() {
         <SectionHeader
           label="Anwendungen"
           heading="Für jede Branche der richtige Assistent"
-          description="Clawsistent passt sich an Ihren Beruf an — mit branchenspezifischem Wissen und Workflows."
+          description="Clawsistent passt sich an Ihren Beruf an, mit branchenspezifischem Wissen und passenden Workflows."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -13,7 +13,7 @@ export default function SetupSteps() {
         <SectionHeader
           label="So funktioniert's"
           heading="In 5 Schritten startklar"
-          description="Von der Anmeldung bis zum produktiven Einsatz — in wenigen Minuten."
+          description="Von der Anmeldung bis zum produktiven Einsatz. In wenigen Minuten startklar."
         />
 
         <div className="space-y-3">
