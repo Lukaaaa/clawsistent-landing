@@ -50,12 +50,12 @@ export const PROFESSIONS: Profession[] = [
     integrations: ["orderbird", "ready2order", "Lightspeed", "gastronovi"],
   },
   {
-    id: "coach",
-    label: "Coach / Berater",
-    emoji: "💡",
-    description: "Terminbuchung, Kundenanfragen, Kursplanung",
-    skills: ["Terminbuchung", "Kundenkommunikation", "Kursplanung"],
-    integrations: ["Calendly", "Zoom", "CentralStationCRM", "Orbnet"],
+    id: "sales",
+    label: "Sales",
+    emoji: "💰",
+    description: "Leads qualifizieren, Pipeline verwalten, Abschlüsse nachverfolgen",
+    skills: ["Lead-Qualifizierung", "Pipeline-Management", "Follow-ups"],
+    integrations: ["HubSpot", "Salesforce", "Pipedrive", "Dealfront"],
   },
   {
     id: "versicherung",
@@ -255,12 +255,12 @@ export const DEMO_CHATS: DemoChat[] = [
     ],
   },
   {
-    professionId: "coach",
+    professionId: "sales",
     messages: [
-      { role: "user", content: "Wie viele Teilnehmer haben sich für das Führungskräfte-Seminar nächste Woche angemeldet?" },
-      { role: "assistant", content: "Aktuell 8 von 12 Plätzen belegt. 3 Teilnehmer haben noch nicht bezahlt. Außerdem haben 2 Interessenten um einen Rückruf gebeten, weil sie Fragen zum Seminarinhalt haben." },
-      { role: "user", content: "Schick den 3 eine Zahlungserinnerung und ruf die 2 Interessenten zurück mit den Seminardetails." },
-      { role: "assistant", content: "3 freundliche Zahlungserinnerungen mit Bankdaten und Frist versendet. Für die 2 Interessenten habe ich Rückruf-Termine in Ihrem Kalender eingetragen (heute 14:00 und 14:30) inkl. Gesprächsleitfaden mit Seminarinfos. ✅" },
+      { role: "user", content: "Wie sieht unsere Pipeline diese Woche aus? Welche Deals stehen kurz vor dem Abschluss?" },
+      { role: "assistant", content: "3 Deals in der Abschlussphase: TechVision GmbH (€24.000, Angebot unterschriftsreif), Retail Plus AG (€18.500, Demo lief gut — Entscheider will Freitag Feedback geben), LogiPart KG (€9.200, wartet auf Freigabe vom Einkauf). Gesamte Pipeline diese Woche: €127.400." },
+      { role: "user", content: "Schick TechVision das finale Angebot und erinner Retail Plus am Freitag. Bei LogiPart frag nach dem Status." },
+      { role: "assistant", content: "Erledigt! TechVision GmbH hat das finale Angebot als PDF per E-Mail erhalten. Für Retail Plus AG ist eine Follow-up-Mail am Freitag um 10:00 eingeplant. LogiPart KG habe ich gerade eine freundliche Status-Anfrage gesendet. Alle Aktivitäten in HubSpot protokolliert. ✅" },
     ],
   },
   {
