@@ -13,7 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Clawsistent — KI-Assistent für den deutschsprachigen Mittelstand",
   description:
-    "Clawsistent automatisiert Ihre Büroarbeit mit künstlicher Intelligenz. Branchenspezifisch, DSGVO-konform und sofort einsatzbereit. E-Mails, Termine, Kundenverwaltung — alles in einem.",
+    "Clawsistent automatisiert Ihre Büroarbeit mit künstlicher Intelligenz. Branchenspezifisch, DSGVO-konform und sofort einsatzbereit. E-Mails, Termine und Kundenverwaltung in einem.",
   keywords: [
     "KI-Assistent",
     "Büroautomatisierung",
@@ -55,7 +55,7 @@ const jsonLd = {
   name: "Clawsistent",
   applicationCategory: "BusinessApplication",
   description:
-    "KI-Assistent für den deutschsprachigen Mittelstand — automatisiert Büroarbeit branchenspezifisch und DSGVO-konform.",
+    "KI-Assistent für den deutschsprachigen Mittelstand. Automatisiert Büroarbeit branchenspezifisch und DSGVO-konform.",
   url: "https://www.clawsistent.com",
   offers: {
     "@type": "AggregateOffer",

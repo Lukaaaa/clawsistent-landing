@@ -92,9 +92,9 @@ export const FEATURES: Feature[] = [
     icon: "📄",
   },
   {
-    title: "Kundenverwaltung",
-    description: "Kontakte pflegen, Kundenhistorie einsehen, Notizen hinzufügen",
-    icon: "👥",
+    title: "Integrationen",
+    description: "Verbindet sich mit Ihrem CRM, ERP und den Tools, die Sie bereits nutzen",
+    icon: "🔗",
   },
   {
     title: "Aufgabenmanagement",
@@ -138,7 +138,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     name: "Professional",
     price: 99,
     period: "/ Monat",
-    description: "Für wachsende Teams und anspruchsvolle Kanzleien",
+    description: "Für wachsende Teams mit höheren Ansprüchen",
     features: [
       "3 KI-Assistenten",
       "Unbegrenzte Nachrichten",
@@ -205,7 +205,7 @@ export const DEMO_CHATS: DemoChat[] = [
       { role: "user", content: "Welche Mandanten haben ihre Belege für die UStVA Februar noch nicht eingereicht?" },
       { role: "assistant", content: "4 Mandanten haben noch offene Belege: Müller GmbH (Eingangsrechnungen), Weber KG (Reisekosten), Praxis Dr. Horn (Kassenbuch), Schmidt Consulting (Bankbelege). Frist ist der 10.03." },
       { role: "user", content: "Schicke allen eine Erinnerung mit den fehlenden Unterlagen." },
-      { role: "assistant", content: "Ich habe 4 personalisierte Erinnerungen versendet — jeweils mit der konkreten Liste der fehlenden Belege und dem Fristhinweis 10.03. ✅" },
+      { role: "assistant", content: "Ich habe 4 personalisierte Erinnerungen versendet, jeweils mit der konkreten Liste der fehlenden Belege und dem Fristhinweis 10.03. ✅" },
     ],
   },
   {

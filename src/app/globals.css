@@ -41,20 +41,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Logo marquee animation */
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee 12s linear infinite;
-  will-change: transform;
+  animation: marquee 10s linear infinite;
 }
+
+@media (min-width: 768px) {
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+}
+
+@media (min-width: 1280px) {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
 
 /* Typing animation */
 @keyframes blink {
