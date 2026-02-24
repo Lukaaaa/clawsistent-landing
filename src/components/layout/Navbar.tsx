@@ -32,7 +32,6 @@ export default function Navbar() {
             <a href="/#demo" className="text-navy-600 hover:text-navy-900 transition-colors">Demo</a>
             <a href="/#anwendungen" className="text-navy-600 hover:text-navy-900 transition-colors">Anwendungen</a>
             <a href="/#funktionen" className="text-navy-600 hover:text-navy-900 transition-colors">Funktionen</a>
-            <a href="/#preise" className="text-navy-600 hover:text-navy-900 transition-colors">Preise</a>
             <Button href="/voranmelden" size="sm">Voranmelden</Button>
           </div>
 
@@ -60,7 +59,6 @@ export default function Navbar() {
             <a href="/#demo" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Demo</a>
             <a href="/#anwendungen" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Anwendungen</a>
             <a href="/#funktionen" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Funktionen</a>
-            <a href="/#preise" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Preise</a>
             <div onClick={() => setIsMobileMenuOpen(false)}>
               <Button href="/voranmelden" className="w-full">Voranmelden</Button>
             </div>

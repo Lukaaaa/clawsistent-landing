@@ -5,8 +5,6 @@ import SetupSteps from "@/components/sections/SetupSteps";
 import UseCasesGrid from "@/components/sections/UseCasesGrid";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import BenefitsBar from "@/components/sections/BenefitsBar";
-import Pricing from "@/components/sections/Pricing";
-
 export default function Home() {
   return (
     <main>
@@ -17,7 +15,6 @@ export default function Home() {
       <SetupSteps />
       <UseCasesGrid />
       <FeaturesGrid />
-      <Pricing />
     </main>
   );
 }
