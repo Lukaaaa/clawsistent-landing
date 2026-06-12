@@ -15,6 +15,31 @@ interface LeadFormProps {
   utmSource?: string;
 }
 
+const inputStyles =
+  "w-full px-4 py-3 bg-cream-50 border border-line rounded-2xl text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition";
+
+function SubmitButton({ isSubmitting }: { isSubmitting: boolean }) {
+  return (
+    <button
+      type="submit"
+      disabled={isSubmitting}
+      className="w-full px-6 py-3.5 bg-primary-500 text-white font-semibold rounded-full hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-[inset_0_-1px_1px_rgba(0,0,0,0.12),0_1px_2px_rgba(35,32,26,0.08)]"
+    >
+      {isSubmitting ? (
+        <span className="flex items-center justify-center gap-2">
+          <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+          </svg>
+          Wird gesendet...
+        </span>
+      ) : (
+        "Jetzt starten"
+      )}
+    </button>
+  );
+}
+
 export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadFormProps) {
   const [formData, setFormData] = useState({
     name: "",
@@ -69,10 +94,11 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
   if (isSuccess) {
     return (
       <div className="text-center py-12">
-        <div className="text-5xl mb-4">🎉</div>
-        <h3 className="text-2xl font-bold text-navy-900 mb-2">Vielen Dank!</h3>
-        <p className="text-navy-500">
-          Sie sind jetzt auf der Warteliste. Wir melden uns in Kürze bei Ihnen.
+        <div className="text-5xl mb-4">🦀</div>
+        <h3 className="text-2xl font-bold text-ink-900 mb-2">Perfekt, es geht los!</h3>
+        <p className="text-ink-600">
+          In Kürze meldet sich ein Mitarbeiter von uns, der gemeinsam mit dir Claw bei dir
+          installiert und auf deine Bedürfnisse anpasst.
         </p>
       </div>
     );
@@ -81,7 +107,7 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
   return (
     <form onSubmit={handleSubmit} className="space-y-4 pb-24 md:pb-0">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-navy-700 mb-1">
+        <label htmlFor="name" className="block text-sm font-semibold text-ink-700 mb-1.5">
           Name *
         </label>
         <input
@@ -91,13 +117,13 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-navy-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          className={inputStyles}
           placeholder="Max Mustermann"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-navy-700 mb-1">
+        <label htmlFor="email" className="block text-sm font-semibold text-ink-700 mb-1.5">
           E-Mail *
         </label>
         <input
@@ -107,13 +133,13 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-navy-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          className={inputStyles}
           placeholder="max@beispiel.at"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-navy-700 mb-1">
+        <label htmlFor="phone" className="block text-sm font-semibold text-ink-700 mb-1.5">
           Telefon
         </label>
         <input
@@ -122,13 +148,13 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-navy-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          className={inputStyles}
           placeholder="+43 123 456 789"
         />
       </div>
 
       <div>
-        <label htmlFor="profession" className="block text-sm font-medium text-navy-700 mb-1">
+        <label htmlFor="profession" className="block text-sm font-semibold text-ink-700 mb-1.5">
           Beruf *
         </label>
         <select
@@ -137,7 +163,7 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
           required
           value={formData.profession}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-navy-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
+          className={inputStyles}
         >
           <option value="">Bitte wählen...</option>
           {PROFESSION_OPTIONS.map((opt) => (
@@ -150,7 +176,7 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
       </div>
 
       <div>
-        <label htmlFor="company" className="block text-sm font-medium text-navy-700 mb-1">
+        <label htmlFor="company" className="block text-sm font-semibold text-ink-700 mb-1.5">
           Unternehmen
         </label>
         <input
@@ -159,57 +185,25 @@ export default function LeadForm({ defaultPlan, defaultBeruf, utmSource }: LeadF
           name="company"
           value={formData.company}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-navy-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          className={inputStyles}
           placeholder="Firma GmbH"
         />
       </div>
 
       {error && (
-        <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm">
+        <div className="p-3 bg-red-50 border border-red-200 rounded-2xl text-red-600 text-sm">
           {error}
         </div>
       )}
 
       {/* Desktop submit button (inline) */}
-      <div className="hidden md:block">
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full px-6 py-3 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-        >
-          {isSubmitting ? (
-            <span className="flex items-center justify-center gap-2">
-              <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-              </svg>
-              Wird gesendet...
-            </span>
-          ) : (
-            "Jetzt voranmelden"
-          )}
-        </button>
+      <div className="hidden md:block pt-1">
+        <SubmitButton isSubmitting={isSubmitting} />
       </div>
 
       {/* Mobile sticky submit button */}
-      <div className="fixed bottom-0 inset-x-0 p-4 bg-white/80 backdrop-blur-lg border-t border-navy-100 md:hidden z-40">
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full px-6 py-3 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-        >
-          {isSubmitting ? (
-            <span className="flex items-center justify-center gap-2">
-              <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-              </svg>
-              Wird gesendet...
-            </span>
-          ) : (
-            "Jetzt voranmelden"
-          )}
-        </button>
+      <div className="fixed bottom-0 inset-x-0 p-4 bg-cream-50/85 backdrop-blur-lg border-t border-line md:hidden z-40">
+        <SubmitButton isSubmitting={isSubmitting} />
       </div>
     </form>
   );

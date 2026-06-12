@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Impressum — Clawsistent",
+  title: "Impressum | Clawsistent",
   description:
     "Impressum und rechtliche Informationen der KLDigital OG, Betreiberin von Clawsistent.",
 };

@@ -1,51 +1,55 @@
-"use client";
-
-import { useState } from "react";
 import SectionHeader from "@/components/ui/SectionHeader";
-import { SETUP_STEPS } from "@/lib/constants";
+
+const STEPS = [
+  {
+    number: "1",
+    emoji: "🧑‍💼",
+    title: "Beruf wählen",
+    description:
+      "Sag mir, was du machst, und ich stelle mich auf deine Branche, deine Fachbegriffe und deine Abläufe ein.",
+  },
+  {
+    number: "2",
+    emoji: "🔌",
+    title: "Tools verbinden",
+    description:
+      "E-Mail, Kalender und deine bestehenden Programme sind in unter 60 Sekunden verbunden. Kein Training nötig.",
+  },
+  {
+    number: "3",
+    emoji: "⏰",
+    title: "Zeit zurückbekommen",
+    description:
+      "Postfach sortiert, Termine geplant, Follow-ups erledigt. Je länger wir zusammenarbeiten, desto besser werde ich.",
+  },
+];
 
 export default function SetupSteps() {
-  const [openStep, setOpenStep] = useState(0);
-
   return (
-    <section className="py-20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="so-funktionierts" className="py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="So funktioniert's"
-          heading="In 3 Schritten startklar"
-          description="Verbinden und los geht's — ohne Einrichtung, ohne Training."
+          heading="In Minuten startklar"
+          description="Ich sortiere dein Postfach, plane deine Termine und erledige die Routinearbeit, noch bevor du morgens den ersten Kaffee hast."
         />
 
-        <div className="space-y-3">
-          {SETUP_STEPS.map((step, index) => (
+        <div className="grid md:grid-cols-3 gap-5">
+          {STEPS.map((step) => (
             <div
               key={step.number}
-              className="border border-navy-100 rounded-xl overflow-hidden"
+              className="rounded-3xl bg-white border border-line p-7 shadow-[0_1px_2px_rgba(35,32,26,0.04)] hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300"
             >
-              <button
-                className="w-full flex items-center gap-4 px-6 py-4 text-left hover:bg-navy-50 transition-colors cursor-pointer"
-                onClick={() => setOpenStep(openStep === index ? -1 : index)}
-              >
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-500 text-white text-sm font-bold flex-shrink-0">
+              <div className="w-14 h-14 rounded-2xl bg-cream-100 border border-line flex items-center justify-center text-2xl mb-6">
+                {step.emoji}
+              </div>
+              <div className="flex items-center gap-3 mb-2.5">
+                <span className="w-6 h-6 rounded-md bg-cream-200 text-ink-600 text-sm font-bold flex items-center justify-center">
                   {step.number}
                 </span>
-                <span className="font-semibold text-navy-900">{step.title}</span>
-                <svg
-                  className={`w-5 h-5 ml-auto text-navy-400 transition-transform ${
-                    openStep === index ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {openStep === index && (
-                <div className="px-6 pb-4 pl-18 text-navy-500">
-                  {step.description}
-                </div>
-              )}
+                <h3 className="text-lg font-bold text-ink-900">{step.title}</h3>
+              </div>
+              <p className="text-ink-600 leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

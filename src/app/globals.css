@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  /* Orange primary palette */
+  /* Warm cream surfaces (Lindy-inspired) */
+  --color-cream-50: #fdfbf6;
+  --color-cream-100: #f8f3e8;
+  --color-cream-200: #f1e9d7;
+  --color-cream-300: #e6dabf;
+  --color-line: #e9e1cd;
+  --color-line-strong: #d9cdb1;
+
+  /* Warm ink text */
+  --color-ink-900: #23201a;
+  --color-ink-700: #494438;
+  --color-ink-600: #6b6453;
+  --color-ink-500: #837b67;
+  --color-ink-400: #9a9180;
+
+  /* Brand orange (Claw) */
   --color-primary-50: #fff7ed;
   --color-primary-100: #ffedd5;
   --color-primary-200: #fed7aa;
@@ -13,7 +28,12 @@
   --color-primary-800: #9a3412;
   --color-primary-900: #7c2d12;
 
-  /* Navy text palette */
+  /* iMessage colors for the phone demo */
+  --color-imessage: #0a84ff;
+  --color-imessage-grey: #e9e9eb;
+  --color-success: #34c759;
+
+  /* Legacy navy palette (admin pages) */
   --color-navy-50: #f0f4f8;
   --color-navy-100: #d9e2ec;
   --color-navy-200: #bcccdc;
@@ -25,45 +45,47 @@
   --color-navy-800: #243b53;
   --color-navy-900: #102a43;
 
-  /* Green accent */
-  --color-green-500: #22c55e;
-  --color-green-600: #16a34a;
-
-  /* Font */
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-manrope);
 }
 
 body {
-  color: var(--color-navy-900);
-  background: #ffffff;
+  color: var(--color-ink-900);
+  background: var(--color-cream-50);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: var(--color-primary-200);
+  color: var(--color-ink-900);
+}
+
+/* ---------- Marquee ---------- */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee 10s linear infinite;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 55s linear infinite;
+}
+
+.marquee-pause:hover .animate-marquee,
+.marquee-pause:hover .animate-marquee-slow {
+  animation-play-state: paused;
 }
 
 @media (min-width: 768px) {
-  .animate-marquee {
-    animation: marquee 20s linear infinite;
-  }
+  .animate-marquee { animation-duration: 36s; }
+  .animate-marquee-slow { animation-duration: 70s; }
 }
 
-@media (min-width: 1280px) {
-  .animate-marquee {
-    animation: marquee 30s linear infinite;
-  }
-}
-
-
-/* Typing animation */
+/* ---------- Typing dots ---------- */
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
@@ -73,11 +95,104 @@ body {
   animation: blink 1s step-end infinite;
 }
 
-/* Hide scrollbar for horizontal scroll areas */
+@keyframes typing-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+
+.typing-dot {
+  animation: typing-dot 1.15s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.16s; }
+.typing-dot:nth-child(3) { animation-delay: 0.32s; }
+
+/* ---------- Bubble pop-in ---------- */
+@keyframes bubble-in {
+  from { opacity: 0; transform: scale(0.94) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.bubble-in {
+  animation: bubble-in 0.24s ease-out both;
+}
+
+/* ---------- Gentle float (Claw avatar) ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ---------- Fade-up on load ---------- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.fade-up-1 { animation-delay: 0.05s; }
+.fade-up-2 { animation-delay: 0.15s; }
+.fade-up-3 { animation-delay: 0.25s; }
+.fade-up-4 { animation-delay: 0.35s; }
+
+/* ---------- Swoosh underline (Lindy-style) ---------- */
+.swoosh em {
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.swoosh em::before {
+  content: "";
+  position: absolute;
+  bottom: -0.18em;
+  left: 0;
+  width: 100%;
+  height: 0.32em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 18' preserveAspectRatio='none'%3E%3Cpath d='M3 13 C 50 5, 120 3, 197 9' fill='none' stroke='%23f97316' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- Hero flow text (SVG textPath) ---------- */
+.flow-text-in {
+  font-size: 16px;
+  font-weight: 600;
+  fill: rgba(107, 100, 83, 0.32);
+}
+
+.flow-text-out {
+  font-size: 14px;
+  font-weight: 700;
+  fill: #34c759;
+}
+
+/* ---------- Hide scrollbar ---------- */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* ---------- Soft card shadow ---------- */
+.shadow-soft {
+  box-shadow:
+    0 1px 2px rgba(35, 32, 26, 0.04),
+    0 8px 24px rgba(35, 32, 26, 0.06);
+}
+
+.shadow-phone {
+  filter: drop-shadow(0 30px 76px rgba(73, 52, 15, 0.18))
+    drop-shadow(0 12px 26px rgba(73, 52, 15, 0.1));
 }

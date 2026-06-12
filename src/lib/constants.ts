@@ -248,7 +248,7 @@ export const DEMO_CHATS: DemoChat[] = [
     professionId: "sales",
     messages: [
       { role: "user", content: "Wie sieht unsere Pipeline diese Woche aus? Welche Deals stehen kurz vor dem Abschluss?" },
-      { role: "assistant", content: "3 Deals in der Abschlussphase: TechVision GmbH (€24.000, Angebot unterschriftsreif), Retail Plus AG (€18.500, Demo lief gut — Entscheider will Freitag Feedback geben), LogiPart KG (€9.200, wartet auf Freigabe vom Einkauf). Gesamte Pipeline diese Woche: €127.400." },
+      { role: "assistant", content: "3 Deals in der Abschlussphase: TechVision GmbH (€24.000, Angebot unterschriftsreif), Retail Plus AG (€18.500, Demo lief gut, Entscheider will Freitag Feedback geben), LogiPart KG (€9.200, wartet auf Freigabe vom Einkauf). Gesamte Pipeline diese Woche: €127.400." },
       { role: "user", content: "Schick TechVision das finale Angebot und erinner Retail Plus am Freitag. Bei LogiPart frag nach dem Status." },
       { role: "assistant", content: "Erledigt! TechVision GmbH hat das finale Angebot als PDF per E-Mail erhalten. Für Retail Plus AG ist eine Follow-up-Mail am Freitag um 10:00 eingeplant. LogiPart KG habe ich gerade eine freundliche Status-Anfrage gesendet. Alle Aktivitäten in HubSpot protokolliert. ✅" },
     ],

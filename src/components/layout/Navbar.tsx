@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 
+const NAV_LINKS = [
+  { href: "/#funktionen", label: "Funktionen" },
+  { href: "/#demo", label: "Demo" },
+  { href: "/#so-funktionierts", label: "So funktioniert's" },
+];
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,27 +22,37 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-lg shadow-sm" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-3 pt-3">
+      <div
+        className={`max-w-5xl mx-auto rounded-full px-4 sm:px-6 transition-all duration-300 border ${
+          isScrolled || isMobileMenuOpen
+            ? "bg-cream-50/85 backdrop-blur-xl border-line shadow-soft"
+            : "bg-transparent border-transparent"
+        }`}
+      >
+        <div className="flex items-center justify-between h-14">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="Clawsistent" width={36} height={36} />
-            <span className="text-xl font-bold text-navy-900">Clawsistent</span>
+            <Image src="/logo.svg" alt="Clawsistent" width={32} height={32} />
+            <span className="text-lg font-bold tracking-tight text-ink-900">Clawsistent</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            <a href="/#demo" className="text-navy-600 hover:text-navy-900 transition-colors">Demo</a>
-            <a href="/#anwendungen" className="text-navy-600 hover:text-navy-900 transition-colors">Anwendungen</a>
-            <a href="/#funktionen" className="text-navy-600 hover:text-navy-900 transition-colors">Funktionen</a>
-            <Button href="/voranmelden" size="sm">Voranmelden</Button>
+          <div className="hidden md:flex items-center gap-7">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-semibold text-ink-600 hover:text-ink-900 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button href="/start" size="sm">
+              Jetzt starten
+            </Button>
           </div>
 
           <button
-            className="md:hidden p-2 text-navy-600"
+            className="md:hidden p-2 text-ink-700"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menü öffnen"
           >
@@ -54,13 +70,22 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-navy-100">
-          <div className="px-4 py-4 space-y-3">
-            <a href="/#demo" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Demo</a>
-            <a href="/#anwendungen" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Anwendungen</a>
-            <a href="/#funktionen" className="block py-2 text-navy-600" onClick={() => setIsMobileMenuOpen(false)}>Funktionen</a>
-            <div onClick={() => setIsMobileMenuOpen(false)}>
-              <Button href="/voranmelden" className="w-full">Voranmelden</Button>
+        <div className="md:hidden max-w-5xl mx-auto mt-2 rounded-3xl bg-cream-50/95 backdrop-blur-xl border border-line shadow-soft overflow-hidden">
+          <div className="px-5 py-4 space-y-1">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="block py-2.5 font-semibold text-ink-700"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <div className="pt-2" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button href="/start" className="w-full">
+                Jetzt starten
+              </Button>
             </div>
           </div>
         </div>

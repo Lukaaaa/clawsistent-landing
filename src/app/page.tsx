@@ -1,20 +1,27 @@
 import Hero from "@/components/sections/Hero";
-import DemoSection from "@/components/sections/DemoSection";
 import LogoMarquee from "@/components/sections/LogoMarquee";
+import FeatureShowcase from "@/components/sections/FeatureShowcase";
+import DemoSection from "@/components/sections/DemoSection";
 import SetupSteps from "@/components/sections/SetupSteps";
-import UseCasesGrid from "@/components/sections/UseCasesGrid";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
-import BenefitsBar from "@/components/sections/BenefitsBar";
+import Security from "@/components/sections/Security";
+import Pricing from "@/components/sections/Pricing";
+import Testimonials from "@/components/sections/Testimonials";
+import FinalCta from "@/components/sections/FinalCta";
+
 export default function Home() {
   return (
     <main>
       <Hero />
       <LogoMarquee />
+      <FeatureShowcase />
       <DemoSection />
-      <BenefitsBar />
       <SetupSteps />
-      <UseCasesGrid />
       <FeaturesGrid />
+      <Security />
+      <Pricing />
+      <Testimonials />
+      <FinalCta />
     </main>
   );
 }

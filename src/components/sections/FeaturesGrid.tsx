@@ -3,23 +3,25 @@ import { FEATURES } from "@/lib/constants";
 
 export default function FeaturesGrid() {
   return (
-    <section id="funktionen" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          label="Funktionen"
-          heading="Alles, was Ihr Backoffice braucht"
-          description="Von Kommunikation bis Buchhaltung. Clawsistent deckt alle wichtigen Büroaufgaben ab."
+          label="Und vieles mehr"
+          heading="Was ich sonst noch für dich erledige"
+          description="Von Kommunikation bis Buchhaltung: Ich decke die Büroaufgaben ab, die dich jeden Tag Zeit kosten."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className="p-6 rounded-xl border border-navy-100 hover:border-primary-300 hover:shadow-md transition-all duration-200"
+              className="p-6 rounded-3xl bg-white border border-line hover:border-line-strong hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300"
             >
-              <span className="text-3xl">{feature.icon}</span>
-              <h3 className="mt-3 font-semibold text-navy-900">{feature.title}</h3>
-              <p className="mt-2 text-sm text-navy-500">{feature.description}</p>
+              <span className="inline-flex w-11 h-11 rounded-xl bg-cream-100 border border-line items-center justify-center text-xl">
+                {feature.icon}
+              </span>
+              <h3 className="mt-4 font-bold text-ink-900">{feature.title}</h3>
+              <p className="mt-1.5 text-sm text-ink-600 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

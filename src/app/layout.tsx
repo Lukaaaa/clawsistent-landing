@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Clawsistent — KI-Assistent für den deutschsprachigen Mittelstand",
+  title: "Clawsistent | KI-Assistent für den deutschsprachigen Mittelstand",
   description:
     "Clawsistent automatisiert Ihre Büroarbeit mit künstlicher Intelligenz. Branchenspezifisch, DSGVO-konform und sofort einsatzbereit. E-Mails, Termine und Kundenverwaltung in einem.",
   keywords: [
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     locale: "de_AT",
     url: "https://www.clawsistent.com",
     siteName: "Clawsistent",
-    title: "Clawsistent — KI-Assistent für den deutschsprachigen Mittelstand",
+    title: "Clawsistent | KI-Assistent für den deutschsprachigen Mittelstand",
     description:
       "Automatisieren Sie Ihre Büroarbeit mit KI. Branchenspezifisch, DSGVO-konform, sofort einsatzbereit.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clawsistent — KI-Assistent für den Mittelstand",
+    title: "Clawsistent | KI-Assistent für den Mittelstand",
     description:
       "Automatisieren Sie Ihre Büroarbeit mit KI. Branchenspezifisch & DSGVO-konform.",
   },
@@ -88,7 +88,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${manrope.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
